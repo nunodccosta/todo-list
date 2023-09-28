@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app-overlord {
+  height: calc(100vh - 8rem);
+}
