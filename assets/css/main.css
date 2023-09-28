@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* grandparent */
 .app-overlord {
   height: calc(100vh - 8rem);
+  z-index: 0;
+  position: relative;
+}
+/* parent */
+.main-container {
+  position: relative;
+}
+/* child */
+.todo-create-modal {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  transform: translateY(-50%) translateX(-100%);
+}
+
+.modal-enter-to,
+.modal-leave-from {
+  transform: translateY(-50%) translateX(0%);
+}
+.modal-enter-active,
+.modal-leave-active {
+  transition: transform 0.5s ease-in-out;
 }
